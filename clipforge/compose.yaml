@@ -1,0 +1,10 @@
+services:
+  clips:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - clip_data:/app/data
+    restart: unless-stopped
+volumes:
+  clip_data:

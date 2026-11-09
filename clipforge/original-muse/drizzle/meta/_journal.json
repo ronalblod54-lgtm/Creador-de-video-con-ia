@@ -1,0 +1,69 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1794169086635,
+      "tag": "0001_initial",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794169086635,
+      "tag": "0002_projects_and_clips_tables",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794171244040,
+      "tag": "0003_add_clip_video_key",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1794173200365,
+      "tag": "0004_add_clip_style_version",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1794179678276,
+      "tag": "0005_add_clip_tiktok_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1794189284553,
+      "tag": "0006_add_project_avatar_url",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1794202362919,
+      "tag": "0007_live_events_and_project_source_kind",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1794205064427,
+      "tag": "0008_accounts_and_per_user_ownership",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1794206588325,
+      "tag": "0009_add_login_credentials_and_sessions",
+      "breakpoints": true
+    }
+  ]
+}

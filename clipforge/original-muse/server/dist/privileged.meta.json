@@ -1,0 +1,563 @@
+{
+  "inputs": {
+    "server/src/privileged.ts": {
+      "bytes": 50111,
+      "imports": [
+        {
+          "path": "child_process",
+          "kind": "import-statement",
+          "original": "node:child_process",
+          "external": true
+        },
+        {
+          "path": "fs/promises",
+          "kind": "import-statement",
+          "original": "node:fs/promises",
+          "external": true
+        },
+        {
+          "path": "path",
+          "kind": "import-statement",
+          "original": "node:path",
+          "external": true
+        },
+        {
+          "path": "node_modules/@hatch/space-sdk/dist/index.js",
+          "kind": "import-statement",
+          "original": "@hatch/space-sdk"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@hatch/space-sdk/dist/index.js": {
+      "bytes": 4273,
+      "imports": [
+        {
+          "path": "node_modules/@hatch/space-sdk/dist/server-contract.js",
+          "kind": "import-statement",
+          "original": "./server-contract"
+        },
+        {
+          "path": "node_modules/@hatch/space-sdk/dist/server-contract.js",
+          "kind": "import-statement",
+          "original": "./server-contract"
+        },
+        {
+          "path": "node_modules/@hatch/space-sdk/dist/verticals.js",
+          "kind": "import-statement",
+          "original": "./verticals"
+        },
+        {
+          "path": "node_modules/@hatch/space-sdk/dist/verticals.js",
+          "kind": "import-statement",
+          "original": "./verticals"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@hatch/space-sdk/dist/server-contract.js": {
+      "bytes": 4743,
+      "imports": [
+        {
+          "path": "node_modules/zod/index.js",
+          "kind": "import-statement",
+          "original": "zod"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/index.js": {
+      "bytes": 121,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/classic/external.js",
+          "kind": "import-statement",
+          "original": "./v4/classic/external.js"
+        },
+        {
+          "path": "node_modules/zod/v4/classic/external.js",
+          "kind": "import-statement",
+          "original": "./v4/classic/external.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/json-schema-processors.js": {
+      "bytes": 20716,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/to-json-schema.js",
+          "kind": "import-statement",
+          "original": "./to-json-schema.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/classic/parse.js": {
+      "bytes": 997,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/index.js",
+          "kind": "import-statement",
+          "original": "../core/index.js"
+        },
+        {
+          "path": "node_modules/zod/v4/classic/errors.js",
+          "kind": "import-statement",
+          "original": "./errors.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/classic/schemas.js": {
+      "bytes": 51378,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/index.js",
+          "kind": "import-statement",
+          "original": "../core/index.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/index.js",
+          "kind": "import-statement",
+          "original": "../core/index.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/json-schema-processors.js",
+          "kind": "import-statement",
+          "original": "../core/json-schema-processors.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/to-json-schema.js",
+          "kind": "import-statement",
+          "original": "../core/to-json-schema.js"
+        },
+        {
+          "path": "node_modules/zod/v4/classic/checks.js",
+          "kind": "import-statement",
+          "original": "./checks.js"
+        },
+        {
+          "path": "node_modules/zod/v4/classic/iso.js",
+          "kind": "import-statement",
+          "original": "./iso.js"
+        },
+        {
+          "path": "node_modules/zod/v4/classic/parse.js",
+          "kind": "import-statement",
+          "original": "./parse.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/classic/iso.js": {
+      "bytes": 1151,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/index.js",
+          "kind": "import-statement",
+          "original": "../core/index.js"
+        },
+        {
+          "path": "node_modules/zod/v4/classic/schemas.js",
+          "kind": "import-statement",
+          "original": "./schemas.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/index.js": {
+      "bytes": 594,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/core.js",
+          "kind": "import-statement",
+          "original": "./core.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/parse.js",
+          "kind": "import-statement",
+          "original": "./parse.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/errors.js",
+          "kind": "import-statement",
+          "original": "./errors.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/schemas.js",
+          "kind": "import-statement",
+          "original": "./schemas.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/checks.js",
+          "kind": "import-statement",
+          "original": "./checks.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/versions.js",
+          "kind": "import-statement",
+          "original": "./versions.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/regexes.js",
+          "kind": "import-statement",
+          "original": "./regexes.js"
+        },
+        {
+          "path": "node_modules/zod/v4/locales/index.js",
+          "kind": "import-statement",
+          "original": "../locales/index.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/registries.js",
+          "kind": "import-statement",
+          "original": "./registries.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/doc.js",
+          "kind": "import-statement",
+          "original": "./doc.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/api.js",
+          "kind": "import-statement",
+          "original": "./api.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/to-json-schema.js",
+          "kind": "import-statement",
+          "original": "./to-json-schema.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/json-schema-processors.js",
+          "kind": "import-statement",
+          "original": "./json-schema-processors.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/json-schema-generator.js",
+          "kind": "import-statement",
+          "original": "./json-schema-generator.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/json-schema.js",
+          "kind": "import-statement",
+          "original": "./json-schema.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/classic/checks.js": {
+      "bytes": 663,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/index.js",
+          "kind": "import-statement",
+          "original": "../core/index.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/classic/errors.js": {
+      "bytes": 1609,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/index.js",
+          "kind": "import-statement",
+          "original": "../core/index.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/index.js",
+          "kind": "import-statement",
+          "original": "../core/index.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "../core/util.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/util.js": {
+      "bytes": 22018,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/core.js",
+          "kind": "import-statement",
+          "original": "./core.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/registries.js": {
+      "bytes": 1512,
+      "imports": [
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/errors.js": {
+      "bytes": 6413,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/core.js",
+          "kind": "import-statement",
+          "original": "./core.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/checks.js": {
+      "bytes": 20005,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/core.js",
+          "kind": "import-statement",
+          "original": "./core.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/regexes.js",
+          "kind": "import-statement",
+          "original": "./regexes.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/core.js": {
+      "bytes": 2578,
+      "imports": [
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/parse.js": {
+      "bytes": 4444,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/core.js",
+          "kind": "import-statement",
+          "original": "./core.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/errors.js",
+          "kind": "import-statement",
+          "original": "./errors.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/to-json-schema.js": {
+      "bytes": 17006,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/registries.js",
+          "kind": "import-statement",
+          "original": "./registries.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/versions.js": {
+      "bytes": 70,
+      "imports": [
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/api.js": {
+      "bytes": 28054,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/checks.js",
+          "kind": "import-statement",
+          "original": "./checks.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/registries.js",
+          "kind": "import-statement",
+          "original": "./registries.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/schemas.js",
+          "kind": "import-statement",
+          "original": "./schemas.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/doc.js": {
+      "bytes": 1088,
+      "imports": [
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/schemas.js": {
+      "bytes": 83322,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/checks.js",
+          "kind": "import-statement",
+          "original": "./checks.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/core.js",
+          "kind": "import-statement",
+          "original": "./core.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/doc.js",
+          "kind": "import-statement",
+          "original": "./doc.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/parse.js",
+          "kind": "import-statement",
+          "original": "./parse.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/regexes.js",
+          "kind": "import-statement",
+          "original": "./regexes.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/versions.js",
+          "kind": "import-statement",
+          "original": "./versions.js"
+        },
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/zod/v4/core/regexes.js": {
+      "bytes": 9078,
+      "imports": [
+        {
+          "path": "node_modules/zod/v4/core/util.js",
+          "kind": "import-statement",
+          "original": "./util.js"
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    "./privileged.js": {
+      "bytes": 170707,
+      "inputs": {
+        "node_modules/zod/v4/core/core.js": {
+          "bytesInOutput": 1935
+        },
+        "node_modules/zod/v4/core/util.js": {
+          "bytesInOutput": 11299
+        },
+        "node_modules/zod/v4/core/errors.js": {
+          "bytesInOutput": 2255
+        },
+        "node_modules/zod/v4/core/parse.js": {
+          "bytesInOutput": 3182
+        },
+        "node_modules/zod/v4/core/regexes.js": {
+          "bytesInOutput": 3325
+        },
+        "node_modules/zod/v4/core/checks.js": {
+          "bytesInOutput": 11644
+        },
+        "node_modules/zod/v4/core/doc.js": {
+          "bytesInOutput": 915
+        },
+        "node_modules/zod/v4/core/versions.js": {
+          "bytesInOutput": 54
+        },
+        "node_modules/zod/v4/core/schemas.js": {
+          "bytesInOutput": 38878
+        },
+        "node_modules/zod/v4/core/registries.js": {
+          "bytesInOutput": 1210
+        },
+        "node_modules/zod/v4/core/api.js": {
+          "bytesInOutput": 9373
+        },
+        "node_modules/zod/v4/core/to-json-schema.js": {
+          "bytesInOutput": 11273
+        },
+        "node_modules/zod/v4/core/json-schema-processors.js": {
+          "bytesInOutput": 7768
+        },
+        "node_modules/zod/v4/core/index.js": {
+          "bytesInOutput": 0
+        },
+        "node_modules/zod/v4/classic/checks.js": {
+          "bytesInOutput": 0
+        },
+        "node_modules/zod/v4/classic/iso.js": {
+          "bytesInOutput": 900
+        },
+        "node_modules/zod/v4/classic/errors.js": {
+          "bytesInOutput": 808
+        },
+        "node_modules/zod/v4/classic/parse.js": {
+          "bytesInOutput": 728
+        },
+        "node_modules/zod/v4/classic/schemas.js": {
+          "bytesInOutput": 23952
+        },
+        "node_modules/zod/index.js": {
+          "bytesInOutput": 0
+        },
+        "node_modules/@hatch/space-sdk/dist/server-contract.js": {
+          "bytesInOutput": 1753
+        },
+        "node_modules/@hatch/space-sdk/dist/index.js": {
+          "bytesInOutput": 41
+        },
+        "server/src/privileged.ts": {
+          "bytesInOutput": 38512
+        }
+      },
+      "imports": [
+      ],
+      "exports": [
+        "privileged",
+        "privilegedHandlers"
+      ],
+      "entryPoint": "server/src/privileged.ts"
+    }
+  }
+}

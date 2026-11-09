@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 52px;
+  --font-sans: "Poppins", "Segoe UI", system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #efe9fb;
+  --surface: #ffffff;
+  --surface-alt: #e6dcf9;
+  --text: #241536;
+  --dim: #6d5a8a;
+  --border: #d5c6f2;
+  --accent: #7c3aed;
+  --accent-strong: #8b5cf6;
+  --accent-soft: #ede9fe;
+  --hot: #c026d3;
+  --used: #65a30d;
+  --danger: #dc2626;
+  --radius: 14px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface-alt);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #150a24;
+    --surface: #241536;
+    --surface-alt: #2e1b47;
+    --text: #f3efff;
+    --dim: #b7a6d9;
+    --border: #3b2560;
+    --accent: #8b5cf6;
+    --accent-strong: #a78bfa;
+    --accent-soft: #2e1b47;
+    --hot: #e879f9;
+    --used: #a3e635;
+    --danger: #f87171;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.time-mono {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}

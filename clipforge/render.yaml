@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: creador-clips-ia
+    runtime: docker
+    plan: starter
+    disk:
+      name: clips-data
+      mountPath: /app/data
+      sizeGB: 10
+    healthCheckPath: /api/health

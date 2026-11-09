@@ -1,0 +1,1 @@
+ALTER TABLE clips ADD COLUMN video_key TEXT;

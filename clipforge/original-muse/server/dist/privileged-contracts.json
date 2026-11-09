@@ -1,0 +1,469 @@
+{
+  "format": "hatch-space-privileged-contracts-v1",
+  "contracts": [
+    {
+      "name": "discardClipRender",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "workPrefix"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "timeout_ms": 30000,
+      "contract_hash": "9f033e39711b3e6bef930e0728e9300997f0600cbffcdd654b2e217800a92d8e"
+    },
+    {
+      "name": "discardLiveWatch",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "workPrefix"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "timeout_ms": 30000,
+      "contract_hash": "0f1ff667369114eb6ffb19c9802449ce75b7df1cfec62ae1ed60335d4ee5de20"
+    },
+    {
+      "name": "finishClipRender",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "workPrefix"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": [
+              "working",
+              "done",
+              "error",
+              "none"
+            ]
+          },
+          "bytes": {
+            "type": "number"
+          },
+          "progress": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "state",
+          "bytes",
+          "progress"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "timeout_ms": 60000,
+      "contract_hash": "ce0a21399e24a4e0655fb79747fdeb5e619550f52c7fb3ec60a6152e4553cdf9"
+    },
+    {
+      "name": "readClipRenderChunk",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "length": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8388608
+          }
+        },
+        "required": [
+          "workPrefix",
+          "offset",
+          "length"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "base64": {
+            "type": "string"
+          },
+          "totalBytes": {
+            "type": "number"
+          },
+          "eof": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "base64",
+          "totalBytes",
+          "eof"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "timeout_ms": 30000,
+      "contract_hash": "59413bb9f7ff6ddd28b6f91dd4e3d5ac0fe93ec55575cf977ba8edaf6433a675"
+    },
+    {
+      "name": "readLiveWatch",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "workPrefix"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": [
+              "watching",
+              "done",
+              "error",
+              "none"
+            ]
+          },
+          "messagesTotal": {
+            "type": "number"
+          },
+          "elapsedSec": {
+            "type": "number"
+          },
+          "anchorExact": {
+            "type": "boolean"
+          },
+          "endReason": {
+            "type": "string"
+          },
+          "buckets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "startSec": {
+                  "type": "number"
+                },
+                "count": {
+                  "type": "number"
+                },
+                "top": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "samples": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "startSec",
+                "count",
+                "top",
+                "samples"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "state",
+          "messagesTotal",
+          "elapsedSec",
+          "anchorExact",
+          "endReason",
+          "buckets"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "timeout_ms": 30000,
+      "contract_hash": "3a07e4e3529b24f1e7592a3f71db6055dffc9064175b5f510488624d3f09fc28"
+    },
+    {
+      "name": "startClipRender",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "videoId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{11}$"
+          },
+          "startSec": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 86400
+          },
+          "durationSec": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 300
+          },
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          },
+          "assContent": {
+            "type": "string",
+            "maxLength": 120000
+          },
+          "layout": {
+            "type": "string",
+            "enum": [
+              "split",
+              "full"
+            ]
+          },
+          "faceImageUrl": {
+            "type": "string",
+            "maxLength": 2000,
+            "format": "uri"
+          }
+        },
+        "required": [
+          "videoId",
+          "startSec",
+          "durationSec",
+          "workPrefix",
+          "assContent"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": [
+              "working",
+              "done",
+              "error",
+              "none"
+            ]
+          }
+        },
+        "required": [
+          "state"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "subprocess.ffmpeg",
+        "network.fetch"
+      ],
+      "timeout_ms": 30000,
+      "contract_hash": "a5fe40d8a045f6d88fb2bc5748ca1ed8ba8ea5b624adbab5edfdcbd4ca27c19f"
+    },
+    {
+      "name": "startLiveWatch",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "videoId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{11}$"
+          },
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          },
+          "apiKey": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 200
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 4000
+          },
+          "clientVersion": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 60
+          },
+          "streamStartEpochMs": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 4102444800000
+          },
+          "anchorExact": {
+            "type": "boolean"
+          },
+          "maxMinutes": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 120
+          }
+        },
+        "required": [
+          "videoId",
+          "workPrefix",
+          "apiKey",
+          "continuation",
+          "clientVersion",
+          "streamStartEpochMs",
+          "anchorExact",
+          "maxMinutes"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": [
+              "working",
+              "done",
+              "error",
+              "none"
+            ]
+          }
+        },
+        "required": [
+          "state"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "network.fetch"
+      ],
+      "timeout_ms": 30000,
+      "contract_hash": "7c584ef4320c5a21090cadc6c212722bbcab0c6bad8f9e19d852879222687cbb"
+    },
+    {
+      "name": "stopLiveWatch",
+      "request_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "workPrefix": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "workPrefix"
+        ],
+        "additionalProperties": false
+      },
+      "response_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok"
+        ],
+        "additionalProperties": false
+      },
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "timeout_ms": 30000,
+      "contract_hash": "303616cdc4e1e5337bd600dbad338a58853e51fc03161f34b9de301440b8d1d0"
+    }
+  ]
+}

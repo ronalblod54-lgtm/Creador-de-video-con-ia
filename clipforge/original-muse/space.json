@@ -1,0 +1,10 @@
+{
+  "runtime": "typescript",
+  "platformVersion": 28,
+  "entry": "client/dist/index.html",
+  "name": "Creador de clips con IA",
+  "slug": "creador-de-clips-con-ia",
+  "managedCronJobs": [
+    "creador-clips-live-events-check"
+  ]
+}

@@ -1,0 +1,6 @@
+original-muse/
+android/
+data/
+**/__pycache__/
+*.zip
+.git/
